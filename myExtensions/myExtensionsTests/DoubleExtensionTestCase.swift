@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import myExtensions
 
 class DoubleExtensionTestCase: XCTestCase {
     
@@ -24,7 +25,10 @@ class DoubleExtensionTestCase: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
+    func testDoubleValue() {
+        XCTAssertEqual(true, 4.isEvenValue())
+        XCTAssertEqual(false, 5.isEvenValue())
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

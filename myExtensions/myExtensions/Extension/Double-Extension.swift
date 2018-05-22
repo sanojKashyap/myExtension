@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+public extension Int {
+    
+    public func isEvenValue()->Bool {
+       return (self % 2 == 0) ? (true) : (false)
+    }
+    
+}

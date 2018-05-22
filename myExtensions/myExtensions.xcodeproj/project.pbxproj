@@ -10,6 +10,8 @@
 		B604ED7620B4215800B3DC62 /* myExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604ED6C20B4215700B3DC62 /* myExtensions.framework */; };
 		B604ED7B20B4215800B3DC62 /* myExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604ED7A20B4215800B3DC62 /* myExtensionsTests.swift */; };
 		B604ED7D20B4215800B3DC62 /* myExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B604ED6F20B4215800B3DC62 /* myExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B604ED8820B421C900B3DC62 /* Double-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604ED8720B421C900B3DC62 /* Double-Extension.swift */; };
+		B604ED8A20B422C400B3DC62 /* DoubleExtensionTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604ED8920B422C400B3DC62 /* DoubleExtensionTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		B604ED7520B4215800B3DC62 /* myExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B604ED7A20B4215800B3DC62 /* myExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myExtensionsTests.swift; sourceTree = "<group>"; };
 		B604ED7C20B4215800B3DC62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B604ED8720B421C900B3DC62 /* Double-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double-Extension.swift"; sourceTree = "<group>"; };
+		B604ED8920B422C400B3DC62 /* DoubleExtensionTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		B604ED6E20B4215700B3DC62 /* myExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				B604ED8620B421A900B3DC62 /* Extension */,
 				B604ED6F20B4215800B3DC62 /* myExtensions.h */,
 				B604ED7020B4215800B3DC62 /* Info.plist */,
 			);
@@ -82,8 +87,17 @@
 			children = (
 				B604ED7A20B4215800B3DC62 /* myExtensionsTests.swift */,
 				B604ED7C20B4215800B3DC62 /* Info.plist */,
+				B604ED8920B422C400B3DC62 /* DoubleExtensionTestCase.swift */,
 			);
 			path = myExtensionsTests;
+			sourceTree = "<group>";
+		};
+		B604ED8620B421A900B3DC62 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B604ED8720B421C900B3DC62 /* Double-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +162,7 @@
 				TargetAttributes = {
 					B604ED6B20B4215700B3DC62 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					B604ED7420B4215800B3DC62 = {
 						CreatedOnToolsVersion = 9.3;
@@ -194,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B604ED8820B421C900B3DC62 /* Double-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B604ED8A20B422C400B3DC62 /* DoubleExtensionTestCase.swift in Sources */,
 				B604ED7B20B4215800B3DC62 /* myExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +356,7 @@
 		B604ED8120B4215800B3DC62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,6 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanoj.RxSample.myExtensions;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +382,7 @@
 		B604ED8220B4215800B3DC62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +407,7 @@
 		B604ED8420B4215800B3DC62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = myExtensionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +425,7 @@
 		B604ED8520B4215800B3DC62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = myExtensionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
